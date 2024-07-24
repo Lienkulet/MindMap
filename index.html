@@ -8,6 +8,134 @@
 </head>
 <body>
     <h1>Aleex MindMap</h1>
-    <script src="codebase/diagram.js"></script>
+    <div id="diagram_container"></div>
+
+
+    <script type="text/javascript" src="codebase/diagram.js"></script>	
+
+    <script>
+        // preparing diagram data
+        const data = [ 
+        {
+            id: "company",
+            text: "Zeroqode",
+            "fill": "#0288D1",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#0288D1",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "plugins",
+            text: "Plugin Developers",
+            parent: "company",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold",
+            "editable": true
+        },
+        {
+            id: "vasileTeam",
+            text: "Vasile Team",
+            parent: "plugins",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "corina",
+            text: "Corina",
+            parent: "vasileTeam",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "artiom",
+            text: "Artiom",
+            parent: "vasileTeam",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "andrei",
+            text: "Andrei",
+            parent: "vasileTeam",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "cristinaTeam",
+            text: "Cristina's Team",
+            parent: "plugins",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "aurelia",
+            text: "Aurelia",
+            parent: "cristinaTeam",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "iulian",
+            text: "Iulian",
+            parent: "cristinaTeam",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "alex",
+            text: "Alex",
+            parent: "cristinaTeam",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+        {
+            id: "sales",
+            text: "Designers",
+            parent: "company",
+            "fill": "#11B3A5",
+		    "fontColor": "#FFFFFF",
+		    "stroke": "#11B3A5",
+		    "headerColor": "#607D8B",
+		    "fontWeight": "bold"
+        },
+       
+
+        ];
+
+        // creating DHTMLX Diagram
+        const diagram = new dhx.Diagram("diagram", { 
+            type: "mindmap",
+        });
+        // loading data into the diagram
+        diagram.data.parse(data);
+
+    </script>
 </body>
 </html>
